@@ -1,0 +1,211 @@
+body {
+    background-color: #2c3e50;
+    color: #fff;
+    font-size: 20px;
+    font-family: "Arial", sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+header div, div p, div ul, div ol {
+    margin: 8px 0px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#skip {
+    position: absolute;
+    left: -500px;
+    visibility: hidden;
+    z-index: 1;
+}
+
+#skip:focus {
+    position: absolute;
+    left: 0px;
+}
+
+nav {
+    background-color: #3498db;
+    border: 2px solid #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    text-align: center;
+    margin: 0;
+    padding: 8px 0;
+}
+
+nav li:hover {
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+nav li#pets, nav li#recipes, nav li#travel {
+    padding: 8px 16px;
+}
+
+nav li a {
+    font-size: 20px;
+    color: #fff;
+}
+
+nav li.current {
+    background-color: #2c3e50;
+    border-bottom: none;
+    border-radius: 15px 15px 0 0;
+    position: relative;
+    top: 10%;
+}
+
+nav li.current a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav li a:focus {
+    outline: 2px solid #fff;
+}
+
+@keyframes header {
+    0% {
+        font-size: 75%;
+        background-color: #3498db;
+        left: -100%;
+    }
+    75% {
+        font-size: 75%;
+        background-color: #3498db;
+        left: 0%;
+    }
+    100% {
+        font-size: 100%;
+        background-color: #2c3e50;
+    }
+}
+
+header {
+    display: block;
+    position: relative;
+    animation-name: header;
+    animation-duration: 1.5s;
+}
+
+main {
+    padding: 0% 5% 5%;
+}
+
+div {
+    border-top: 1px solid #3498db;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+div h2 {
+    font-size: 200%;
+    font-weight: bold;
+    margin: 8px 0px 0px;
+}
+
+div h3 {
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 0;
+    font-size: 150%;
+    padding: 2px;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    line-height: 2;
+}
+
+div p {
+    line-height: 18px;
+    text-indent: 20px;
+}
+
+div img, div video {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    margin: 8px 0px;
+    padding: 4px;
+    transition: transform 0.3s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+}
+
+div video:hover {
+    transform: scale(1.1);
+}
+
+div img:hover {
+    transform: scale(1.1);
+}
+
+div img.destination-img {
+    display: none;
+    animation: spin 4s linear infinite;
+}
+
+div figcaption {
+    margin: 0 20px 8px;
+}
+
+div ul, div ol {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+div ul {
+    list-style: disc outside;
+}
+
+div ul ul {
+    list-style-type: circle;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+div ol {
+    list-style: decimal outside;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    header {
+        animation: none;
+    }
+    div img.destination-gif {
+        display: none;
+    }
+    div img.destination-img {
+        display: inline;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: #2c3e50;
+    }
+}
